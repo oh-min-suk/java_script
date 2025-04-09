@@ -18,3 +18,16 @@ console.log(
 ); // NaN값인 경우
 
 console.log("result", true && console.log("inner output")) // A && B는 A가 true면 B반환(ㄹㅇ 그대로 반환)
+
+const person1 = {
+    name: '김철수',
+    age: 25,
+    married: false
+  };
+  
+  console.log(typeof person1);
+  console.log(person1);
+
+  console.log('name' in person1);
+
+  
