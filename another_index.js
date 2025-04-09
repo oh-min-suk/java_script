@@ -34,3 +34,26 @@ for (let i = 0; i < 5;) {
 for (const num of numbers) { //변수를 매 iteration마다 선언하는 방식(const도 가능)
     console.log(num);
   }
+
+  outer:
+  for (let i = 1; i < 10; i++) {
+  
+    inner:
+    for (let j = 1; j < 10; j++) {
+  
+      if (j % 2 === 0) continue inner;
+      if (i * j >= 30) continue outer;
+      
+      if (j > 8) break inner;
+      if (i - j > 7) break outer;
+  
+      console.log(i, j, i * j);
+    }
+  }
+
+  const test_fn = function(a,b){
+    console.log("a: ", a, "b: ", b);
+    return a+b;
+  }
+
+  console.log(test_fn(100,100));
