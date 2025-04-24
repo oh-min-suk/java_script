@@ -23,3 +23,31 @@ const array1 = [1, 2, 3, 4, 5];
 const { length } = array1; //destructuring은 특정 property를 뽑는 것
 
 console.log(length);
+
+
+console.log(
+    globalThis == globalThis.globalThis,
+    globalThis == globalThis.globalThis.globalThis,
+    globalThis == globalThis.globalThis.globalThis.globalThis
+  );
+
+console.log(
+    isFinite(1),
+    isFinite(0),
+    isFinite('1'),
+    isFinite(null),
+    isFinite(Infinity)
+);
+
+console.log(
+    parseFloat('123.0'),
+    parseFloat('123'),
+    parseFloat(' 123ABC '),
+    parseFloat([123, 456, 789])
+  );
+
+  console.log(
+    parseFloat(123.4567),
+    parseFloat('123.4567'),
+    parseFloat(' 123.4567 ')
+  );
